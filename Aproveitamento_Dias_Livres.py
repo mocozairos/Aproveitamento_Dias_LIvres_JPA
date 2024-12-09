@@ -213,7 +213,9 @@ with row1[0]:
 
 if gerar_analise:
 
-    st.session_state.df_group_salvo = st.session_state.df_group_salvo.iloc[0:0]
+    if 'df_group_salvo' in st.session_state:
+
+        st.session_state.df_group_salvo = st.session_state.df_group_salvo.iloc[0:0]
 
     df_ultimos_servicos_filtrado = gerar_df_ultimos_servicos()
 
